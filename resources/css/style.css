@@ -130,6 +130,7 @@ body {                            /*  Body content  */
 #footer {                          /*  Footer content  */
   display: flex;
   justify-content: flex-start;
+  width: 100%;
 }
 
 #footer p {
