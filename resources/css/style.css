@@ -1,4 +1,4 @@
-body {
+html {
   font-family: helvetica;
   font-size: 22px;
   color: seashell;
@@ -7,7 +7,7 @@ body {
   text-align: center;
 }
 
-#header {
+#header {                          /* Header content  */
   display: flex;
   position: fixed;
   justify-content: space-between;
@@ -37,7 +37,7 @@ body {
   color: seashell;
 }
 
-#body {
+#body {                            /*  Body content  */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,22 +46,27 @@ body {
   align-items: center;
   width: 1200px;
   margin-top: 70px;
+  z-index: 10;
 }
 
 #mission {
   background-image: url(../images/background.jpg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 700px;
+  width: 100%;
 }
 
-#banner {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+#mission h2,
+#mission h4 {
+  display: block;
   width: 100%;
-  background color: black;
+  background-color: black;
+  padding: 30px auto;
+  margin: 0;
 }
 
 #featured {
@@ -70,15 +75,16 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 1000px;
+  width: 1000px;
 }
 
-#teas {
+.teas {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  align-content: space-around;
   flex wrap: wrap;
-  max-width: 1000px;
+  width: 1000px;
 }
 
 .image img {
@@ -115,7 +121,7 @@ body {
   height: 200px;
 }
 
-#footer {
+#footer {                          /*  Footer content  */
   display: flex;
   justify-content: flex-start;
 }
