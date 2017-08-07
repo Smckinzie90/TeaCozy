@@ -1,77 +1,110 @@
 html {
   font-family: helvetica;
-  font-size: 22px;
-  color: seashell;
-  background-color: black;
-  opacity: 0.9;
+  font-size: 10px;
+  color: #C7C3BB;
+  background-color: #000000;
   text-align: center;
+  opacity: 0.9;
+  overflow-x: hidden;
 }
+
 
 #header {                          /* Header content  */
   display: flex;
   position: fixed;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: #000000;
   opacity: 0.9;
   top: 0px;
   width: 100%;
-  height:69px;
-  border-bottom: 1px solid seashell;
+  height: 7rem;
+  border-bottom: 1px solid #C7C3BB;
   z-index: 20;
 }
 
 #logo img {
-  max-height: 50px;
-  margin: auto 10px;
+  max-height: 5rem;
+  margin: auto 1rem;
 }
 
 #nav {
   display: flex;
-  margin: 10px;
+  margin: 1rem;
 }
 
 #nav a {
-  padding: 10px;
+  padding: 1rem;
   text-decoration: underline;
-  color: seashell;
+  color: #C7C3BB;
+  border: 1px solid #C7C3BB;
+  border-radius: 1rem;
+  margin: 1rem;
+  transition: 200ms;
+}
+
+#nav a:hover {
+  color: #000000;
+  background-color: #C7C3BB
 }
 
 body {                            /*  Body content  */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  font-size: 2.2rem;
+  color: #C7C3BB;
 }
 
-#body {
+#content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   text-align: center;
   align-items: center;
-  width: 1200px;
-  margin-top: 70px;
+  max-width: 120rem;
+  min-width: 48rem;
+  margin-top: 6.9rem;
   z-index: 10;
 }
 
 #mission {
   background-image: url(../images/background.jpg);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 700px;
+  height: 70rem;
   width: 100%;
 }
 
-#mission h2,
-#mission h4 {
-  display: block;
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
   width: 100%;
-  background-color: black;
-  padding: 30px auto;
+  min-height: 10rem;
+  background-color: #000000;
+}
+
+#banner br {
+  display: none;
+}
+
+#banner h2, #banner h4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: #000000;
+  padding: 1rem 0rem;
   margin: 0;
 }
 
@@ -81,22 +114,39 @@ body {                            /*  Body content  */
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 1000px;
+  width: 100rem;
 }
 
-.teas {
+.row {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: space-around;
   flex wrap: wrap;
-  width: 1000px;
+  height: 36rem;
+  width: 100rem;
+}
+
+.image {
+  height: 20rem;
+  width: 30rem;
+  border: 1px solid #C7C3BB;
+  border-radius: 1rem;
+  margin: 0rem 2rem;
+  opacity: 0.75;
+  transition: 200ms;
+}
+
+.image:hover {
+  height: 24rem;
+  width: 36rem;
+  opacity: 1;
 }
 
 .image img {
-  height: 200px;
-  width: 300px;
-  margin: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
 }
 
 #locations {
@@ -105,7 +155,11 @@ body {                            /*  Body content  */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  min-height: 50rem;
+}
+
+#locations h2 {
+  color: #000000;
 }
 
 #container {
@@ -118,21 +172,66 @@ body {                            /*  Body content  */
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: black;
-  width: 300px;
-  margin: 15px 40px;
+  background-color: #000000;
+  width: 30rem;
+  border: 2px solid #C7C3BB;
+  border-radius: 1rem;
+  margin: 1.5rem 4rem;
 }
 
 #contact {
-  height: 200px;
+  height: 20rem;
 }
 
 #footer {                          /*  Footer content  */
   display: flex;
   justify-content: flex-start;
+  text-align: left;
   width: 100%;
 }
 
 #footer p {
-  margin: 20px;
+  margin: 2rem;
+}
+
+                                   /*     Mobile Site    */
+
+@media only screen and (max-width: 786px) {
+
+  #nav {
+    display: none;
+  }
+
+  #banner h2{
+    font-size: 3rem
+    }
+
+  #banner h4 {
+    font-size: 1.75rem;
+  }
+
+  #banner br {
+    display: block;
+  }
+
+  .row:nth-child(2n+1) {
+    display: none;
+  }
+
+  .row .image:nth-child(2n+1) {
+    display: none;
+  }
+
+  #container {
+    flex-direction: column;
+  }
+
+  .address h3, .address p {
+    margin: 0.5rem;
+  }
+
+  #footer {
+    justify-content: center;
+  }
+
 }
