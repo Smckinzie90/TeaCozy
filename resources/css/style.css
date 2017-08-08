@@ -35,16 +35,16 @@ html {
 
 #nav a {
   padding: 1rem;
-  text-decoration: underline;
   color: #C7C3BB;
   border: 1px solid #C7C3BB;
-  border-radius: 1rem;
+  border-radius: 2rem;
   margin: 1rem;
   transition: 200ms;
 }
 
 #nav a:hover {
   color: #000000;
+  text-decoration: underline;
   background-color: #C7C3BB
 }
 
@@ -55,6 +55,24 @@ body {                            /*  Body content  */
   align-items: center;
   font-size: 2.2rem;
   color: #C7C3BB;
+}
+
+h2 {
+  font-size: 3.5rem;
+  margin: 2rem
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.75rem;
+  margin: 2rem;
+}
+
+h5 {
+  font-size: 2.5rem;
 }
 
 #content {
@@ -80,6 +98,7 @@ body {                            /*  Body content  */
   text-align: center;
   height: 70rem;
   width: 100%;
+  margin-bottom: 5rem;
 }
 
 #banner {
@@ -123,7 +142,7 @@ body {                            /*  Body content  */
   justify-content: center;
   align-content: space-around;
   flex wrap: wrap;
-  height: 36rem;
+  height: 38rem;
   width: 100rem;
 }
 
@@ -132,7 +151,7 @@ body {                            /*  Body content  */
   width: 30rem;
   border: 1px solid #C7C3BB;
   border-radius: 1rem;
-  margin: 0rem 2rem;
+  margin: 1rem 2rem;
   opacity: 0.75;
   transition: 200ms;
 }
@@ -171,8 +190,11 @@ body {                            /*  Body content  */
 .address {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
   background-color: #000000;
+  height: 30rem;
   width: 30rem;
   border: 2px solid #C7C3BB;
   border-radius: 1rem;
@@ -180,6 +202,10 @@ body {                            /*  Body content  */
 }
 
 #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 20rem;
 }
 
@@ -226,6 +252,10 @@ body {                            /*  Body content  */
     flex-direction: column;
   }
 
+  .address {
+    height: 15rem;
+  }
+
   .address h3, .address p {
     margin: 0.5rem;
   }
@@ -241,5 +271,5 @@ body {                            /*  Body content  */
   #mission {
     height: 70rem;
   }
-  
+
 }
