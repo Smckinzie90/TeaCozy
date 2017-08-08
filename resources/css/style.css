@@ -235,3 +235,11 @@ body {                            /*  Body content  */
   }
 
 }
+
+@media only screen and (max-width: 480px) {
+
+  #mission {
+    height: 70rem;
+  }
+  
+}
