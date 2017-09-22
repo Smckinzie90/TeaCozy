@@ -34,18 +34,12 @@ html {
 }
 
 #nav a {
-  padding: 1rem;
-  color: #C7C3BB;
-  border: 1px solid #C7C3BB;
-  border-radius: 2rem;
   margin: 1rem;
-  transition: 200ms;
+  color: #C7C3BB;
 }
 
 #nav a:hover {
-  color: #000000;
   text-decoration: underline;
-  background-color: #C7C3BB
 }
 
 body {                            /*  Body content  */
